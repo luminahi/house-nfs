@@ -1,0 +1,16 @@
+{
+  "name": "house-nfs",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "build": "esbuild ./src/main.js --minify --bundle --outfile=build/out.js",
+    "watch": "esbuild ./src/main.js --watch --bundle --outfile=build/out.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "esbuild": "^0.25.0"
+  }
+}

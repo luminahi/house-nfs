@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="./favicon.ico" rel="icon" type="image/x-icon" />
+    <link href="./style.css" rel="stylesheet" />
+    <title>Notas da Casa</title>
+  </head>
+
+  <body>
+    <h1>Notas da Casa</h1>
+
+    <div class="section-buttons">
+      <div>
+        <p class="legend">
+          Selecione as notas em andamento
+          <strong>(.txt gerado pelo filial)</strong>
+          e em seguida escolha o grupo de XMLs.
+        </p>
+      </div>
+
+      <div id="btns">
+        <div>
+          <div>
+            <label
+              title="O caminho das XMLs é automáticamente copiado ao clicar aqui."
+              class="btn-xml btn"
+              id="xmlLabel"
+              for="xmlInput"
+              >XMLs
+            </label>
+
+            <input hidden type="file" id="xmlInput" multiple />
+          </div>
+        </div>
+
+        <div>
+          <label class="btn" id="ongoingLabel" for="ongoingInput"
+            >Notas em Andamento</label
+          >
+
+          <input hidden type="file" id="ongoingInput" />
+        </div>
+
+        <div>
+          <div id="btn-clear" class="btn">Limpar</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-situation">
+      <div>
+        <h3>Situação das notas</h3>
+      </div>
+
+      <div id="info-label">
+        <div class="info-row">
+          <div class="info-box normal"></div>
+          <p>Normal</p>
+        </div>
+        <div class="info-row">
+          <div class="info-box warning"></div>
+          <p>Cuidado</p>
+        </div>
+        <div class="info-row">
+          <div class="info-box danger"></div>
+          <p>Perigo</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-table" hidden id="table-container">
+      <table id="nf-table">
+        <thead>
+          <tr>
+            <th>Data e Hora</th>
+            <th>Emissor</th>
+            <th>NF</th>
+            <th>Natureza</th>
+            <th>Valor</th>
+            <th>Observação</th>
+            <th>Ação</th>
+          </tr>
+        </thead>
+        <tbody id="nf-table-body"></tbody>
+      </table>
+    </div>
+
+    <dialog id="item-modal">
+      <div class="table-container">
+        <h2>ALEX</h2>
+        <table id="item-table">
+          <thead>
+            <tr>
+              <th>EAN</th>
+              <th>Host</th>
+              <th>Descrição</th>
+              <th>Tipo</th>
+              <th>QTD</th>
+            </tr>
+          </thead>
+          <tbody id="item-table-body"></tbody>
+        </table>
+      </div>
+
+      <div class="info">
+        <button id="btn-close-modal">Fechar</button>
+        <p id="nf-cs"></p>
+      </div>
+    </dialog>
+    <script src="./build/out.js"></script>
+  </body>
+</html>
